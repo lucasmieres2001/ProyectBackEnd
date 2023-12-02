@@ -1,6 +1,13 @@
 $(document).ready(function(){
-//Se iniciará cuando la página esté cargada;
+verificarToken();
 });
+
+function verificarToken(){
+const token = localStorage.getItem('token');
+if(token){
+window.location.href = "index.html";
+}
+}
 
 async function registrarUsuario() {
 let datos = {};

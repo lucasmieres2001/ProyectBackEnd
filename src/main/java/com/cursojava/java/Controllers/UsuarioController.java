@@ -1,13 +1,27 @@
 package com.cursojava.java.Controllers;
 
+import org.springframework.http.MediaType;
 import com.cursojava.java.dao.UsuarioDao;
 import com.cursojava.java.models.Usuario;
 import com.cursojava.java.utils.JWTUtil;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
+import org.apache.tomcat.util.http.parser.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.multipart.MultipartFile;
 
+
+import java.awt.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 
@@ -71,4 +85,7 @@ public class UsuarioController {
         if(!validarToken(token)){return false;}
         return usuarioDao.enviarTel(datoTel) != null;
     }
+    //--------------------------------------------Imágenes----------------------------------------------------------
+
+
 }

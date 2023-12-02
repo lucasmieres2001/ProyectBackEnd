@@ -24,4 +24,5 @@ public class Usuario {
     private String tel;
     @Getter @Setter @Column(name = "Contrasenia")
     private String password;
+
 }

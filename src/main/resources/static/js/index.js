@@ -1,4 +1,3 @@
-verificarToken();
 $(document).ready(function(){
 nombreDeUsuario();
 });
@@ -16,6 +15,3 @@ localStorage.removeItem('email');
 window.location.href = 'login/html';
 }
 
-function nombreDeUsuario(){
-document.getElementById('nombreDeUsuario').outerHTML = localStorage.email;
-}
